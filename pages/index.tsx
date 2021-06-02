@@ -3,6 +3,7 @@ import Head from 'next/head'
 import axios, { AxiosResponse } from 'axios';
 import Card from '../components/Card';
 import ClassComp from '../components/ClassComp';
+import Button from '../components/Button';
 import styles from '../styles/Home.module.css'
 
 interface IHelloResponse {
@@ -52,6 +53,9 @@ export default function Home(): JSX.Element {
         />
 
         <ClassComp stringProp="classComp" numberProp={5} stringArrayProp={["one", "two"]} />
+
+        <Button type="button" text="Hi I'm a button" onClick={() => console.log('testing')} />
+        <Button type="a" text="Hi I'm a link" href="http://www.google.com" />
       </main>
     </div>
   )
